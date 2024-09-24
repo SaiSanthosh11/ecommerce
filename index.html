@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        h1, h2, h3 {
+            color: #333;
+        }
+        #search-bar {
+            margin: 20px;
+            padding: 10px;
+            width: 400px;
+            border: 2px solid #ccc;
+            border-radius: 5px;
+        }
+        #product-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+        #cart-list {
+            display: flex;
+            gap: 20px; /* Space between cart items and billing */
+            margin-top: 20px;
+            justify-content: space-between;
+        }
+        .product-item, .cart-item {
+            border: 1px solid #ddd;
+            padding: 15px;
+            margin: 10px;
+            background-color: #fff;
+            border-radius: 8px;
+            width: 220px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .product-item:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+        }
+        .product-item img, .cart-item img {
+            width: 100%;
+            height: 150px;
+            object-fit: contain;
+            transition: transform 0.3s ease;
+        }
+        .product-item:hover img {
+            transform: scale(1.1);
+        }
+        .product-item h3, .cart-item h4 {
+            margin: 10px 0;
+            font-size: 1.1em;
+        }
+        .cart-item p {
+            margin: 5px 0;
+        }
+        .add-to-cart-btn, .cart-btn, .checkout-btn {
+            padding: 8px 16px;
+            border: none;
+            background-color: #28a745;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, box-shadow 0.3s ease;
+        }
+        .add-to-cart-btn:hover, .cart-btn:hover, .checkout-btn:hover {
+            background-color: #218838;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+        }
+        .cart-btn {
+            background-color: #007bff;
+            margin: 5px;
+        }
+        .cart-btn.remove {
+            background-color: #dc3545;
+        }
+        .checkout-btn {
+            background-color: #ff6347;
+            margin-top: 20px;
+        }
+        .cart-billing {
+            background-color: #fff;
+            padding: 25px;
+            padding-bottom: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            flex: 0 0 300px;  /* Fixed width for billing section */
+            margin-left: 20px; /* Space between items and billing */
+            width: 300px;
+            height: 250px;
+        }
+        .cart-body {
+            display: flex;
+            flex-direction: column; /* Stack cart items vertically */
+            gap: 10px; /* Space between cart items */
+            flex: 0.75;  /* Allow it to take available space */
+            
+        }
+        .cart-item {
+            width: 100%; /* Full width for each item */
+        }
+        span{
+            text-align: center;
+        }
+        .add-to-cart-btn{
+            display: block;
+            text-align: center;
+            margin: auto;
+            margin-top: 20px;
+        }
+        .heading{
+            text-align: center;
+        }
+        #subhead{
+            margin-left: 55px;
+        }
+        #search-bar{
+            margin-left: 50px;
+            padding-right: 100px;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="heading">My Store</h1>
+    <input type="text" id="search-bar" placeholder="Search products..." oninput="searchItems()">
+
+    <h2 id="subhead">Products</h2>
+    <div id="product-list"></div>
+
+    <h2>Your Cart</h2>
+    <div id="cart-list"></div>
+
+    <script src="cart.js"></script>
+</body>
+</html>
