@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">  
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
@@ -34,9 +34,6 @@
             gap: 20px; /* Space between cart items and billing */
             margin-top: 20px;
             justify-content: space-between;
-        }
-        #side{
-            margin-left:20px;
         }
         .product-item, .cart-item {
             border: 1px solid #ddd;
@@ -133,44 +130,31 @@
             margin-left: 50px;
             padding-right: 100px;
         }
-        @media (max-width: 768px) {
-        #search-bar {
-            width: 90%;
-            margin: 10px auto;
-        }
-        .product-item {
-            width: 90%;
-        }
-}
-
-
-
-
-
         
     </style>
 </head>
 <body>
     <div class="bg-warning  my-auto d-flex justify-content-between flex-column">
-        <img src="https://tse2.mm.bing.net/th?id=OIP.xRfk-8-sg0l2IeXLBjJT2QHaFj&pid=Api&P=0&h=220"  width="100" height="50" alt="" />
-        <ul class='d-flex gap-4 justify-content-end list-unstyled mx-4 my-auto'>
-            
-          <li>Home</li>
-          <li>About</li>
-          <li>Products</li>
-          <li>Contact</li>
-          <li>Signup</li>
-          <li><i class="fas fa-shopping-cart"></i></li>
-        </ul>
-        <img src="https://images.fonearena.com/blog/wp-content/uploads/2022/12/Fire-Boltt-Gladiator-1024x576.jpg" height="300px" alt="" />  
-    </div>
-    <input type="text" class="mx-auto" id="search-bar" placeholder="Search products..." oninput="searchItems()">
-    
+        <div class="one">
+            <img src="https://tse2.mm.bing.net/th?id=OIP.xRfk-8-sg0l2IeXLBjJT2QHaFj&pid=Api&P=0&h=220"  width="100" height="50" alt="" />
+            <ul class='d-flex gap-4 justify-content-end list-unstyled mx-4 my-auto align-items-center'>
+                <li>Home</li>
+                <li>About</li>
+                <li>Products</li>
+                <li>Contact</li>
+                <li>Signup</li>
+                <li><i class="fas fa-shopping-cart"></i></li>
+              </ul>
+        </div>
+        <img src="https://images.fonearena.com/blog/wp-content/uploads/2022/12/Fire-Boltt-Gladiator-1024x576.jpg" height="300px" alt="" />
+      </div>
+      
+    <input type="text" id="search-bar" placeholder="Search products..." oninput="searchItems()">
 
     <h2 id="subhead">Products</h2>
     <div id="product-list"></div>
 
-    <h2 id="side">Your Cart</h2>
+    <h2>Your Cart</h2>
     <div id="cart-list"></div>
 
     <script src="cart.js"></script>
